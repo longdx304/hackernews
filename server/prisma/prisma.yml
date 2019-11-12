@@ -1,0 +1,12 @@
+# Http endpoint for Prisma API
+#endpoint: ''
+endpoint: http://prisma:4466
+
+# Points to the file containing datamodel
+datamodel: datamodel.prisma
+databaseType: document
+
+# Specifies language & location for generated Prisma client
+generate:
+  - generator: javascript-client
+    output: ../src/generated/prisma-client
