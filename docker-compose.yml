@@ -1,0 +1,19 @@
+version: '3'
+
+services:
+  server:
+    build: server/
+    container_name: server
+    ports:
+      - 4000:4000
+    volumes:
+      - ./server:/app
+      - /app/node_modules
+  web:
+    build: web/
+    container_name: web
+    ports:
+      - 3000:3000
+    volumes:
+      - ./web:/app
+      - /app/node_modules
